@@ -1,0 +1,18 @@
+<p>Example of Directive ngModel</p>
+
+<h1>{{ myname }}</h1>
+
+  
+  
+  
+  
+<!--Event-databinding-->
+<label>Event-binding</label>
+<input #myTitle (input)="onClicked (myTitle.value)"/>  <br/> 
+
+<!--Attribute-databinding-->
+<label>Attribute-binding</label><input [value]="myname" [style.color]="fontColor" > <br/>
+
+<!--Two-way-databinding-->
+<label>Two-way-binding</label><input [(ngModel)]="myname" />
+

@@ -1,0 +1,41 @@
+<h3>Change backgroundcolor:</h3>
+
+<div>
+  <input type="text" class="form-control-lg" placeholder="BackgroundColor..." #txtBackGroundColor />
+  <input type="text" class="form-control-lg" placeholder="Color..." #txtColor />
+
+  <button (click)="onChangeColor(txtBackGroundColor.value, txtColor.value)">
+    Change Color
+  </button>
+</div>
+
+<h3>Change TextColor:</h3>
+
+<div [style.background-color]="backGroundColor" [style.color]="colorfont">
+  <p>
+    This is a text with dynamic background and text color. You can change the
+    colors using the input fields above and clicking the "Change Color" button.
+  </p>
+</div>
+
+<h3>Change backgroundcolor</h3>
+<label >
+  <input type="radio" name="type"  #rb1 value="blue" (click)="setBackgroundColor(rb1.value)" />
+  Blue
+</label>
+<label>
+  <input type="radio" name="type" #rb2 value="red" (click)="setBackgroundColor(rb2.value)" />
+  Red
+</label>
+<label>
+  <input type="radio" name="type"   #rb3 value="yellow" (click)="setBackgroundColor(rb3.value)" />
+  Yellow
+</label>
+<label>
+  <input type="radio" name="type" #rb4 value="black" (click)="setBackgroundColor(rb4.value)" />
+  Black
+</label>
+<label>
+  <input type="radio" name="type" #rb5 value="green" (click)="setBackgroundColor(rb5.value)" />
+  Green
+</label>

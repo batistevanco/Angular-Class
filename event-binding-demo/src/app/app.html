@@ -1,0 +1,98 @@
+<main class="page">
+  <section class="card">
+    <h2>Event binding demo</h2>
+    <h3>Click demo</h3>
+
+    <p>Count: {{ count }}</p>
+    <div class="button-row">
+      <button class="button button-primary" type="button" (click)="increment()">+1</button>
+      <button class="button button-secondary" type="button" (click)="reset()">reset</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Local template variabele</h3>
+
+    <div class="stack">
+      <input #nameInput class="student-input" type="text" placeholder="Enter your name" />
+      <button class="button button-primary" type="button" (click)="sayHello(nameInput.value)">
+        zeg hallo
+      </button>
+    </div>
+
+    <div class="stack">
+      <input
+        #emailInput
+        class="student-input"
+        type="email"
+        placeholder="Enter your email"
+        (keyup)="saveEmail(emailInput.value)"
+      />
+      <p class="email-text">Email: {{ email || 'nog niets ingevuld' }}</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h1>Event binding : mouse and touch</h1>
+
+    <button
+      class="button button-primary"
+      type="button"
+      (click)="incrementClickCount()"
+      (touchstart)="incrementClickCount()"
+    >
+      I am a button
+    </button>
+
+    <p>You clicked {{ clickCount }} time(s)</p>
+  </section>
+
+  <section class="card">
+    <button class="button button-primary" type="button" (click)="showClickAlert()">
+      Click Me
+    </button>
+  </section>
+
+  <section class="card">
+    <h2>Better event binding : keyboard</h2>
+
+    <input
+      class="student-input"
+      type="text"
+      placeholder="Student..."
+      [value]="keyboardInput"
+      (input)="updateKeyboardInput($event)"
+    />
+
+    <p class="live-text">{{ keyboardInput }}</p>
+  </section>
+
+  <section class="card">
+    <h2>Lijst van students</h2>
+
+    <ul class="student-list">
+      @for (student of students; track student; let index = $index) {
+        <li class="student-item">
+          <span>{{ index + 1 }} - {{ student }}</span>
+          <button class="button button-danger" type="button" (click)="removeStudent(index)">
+            Verwijderen
+          </button>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="button-row">
+      <input
+        class="student-input"
+        type="text"
+        placeholder="Student..."
+        [value]="studentInput"
+        (input)="updateStudentInput($event)"
+        (keyup.enter)="addStudent()"
+      />
+      <button class="button button-primary" type="button" (click)="addStudent()">Add</button>
+    </div>
+  </section>
+</main>

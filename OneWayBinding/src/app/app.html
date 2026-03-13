@@ -2,3 +2,34 @@
 
 <p>High school: {{ highSchool }}</p>
 <p>Student name: {{ studentName }}</p>
+
+<!-- ********************************** -->
+<!-- Using *ngFor -->
+<!-- ********************************** -->
+<hr>
+<h3>This are the students:</h3>
+<ul>
+    <li *ngFor="let student of students">{{ student}}</li>
+</ul>
+<ul>
+  <li *ngFor="let student of studentsModel">{{ student.name}}</li>
+</ul>
+
+
+<!-- ********************************** -->
+<!-- NEW in Angular 17 -->
+<!-- ********************************** -->
+<p>NEW in Angular 17</p>
+<ul>
+    @for (student of students; track student) {
+    <li>{{ student }}</li>
+    }
+  </ul>
+
+  <ul>
+    @for (student of studentsModel; track student) {
+    <li>{{ student.name }}</li>
+    }
+  </ul>
+
+<hr>

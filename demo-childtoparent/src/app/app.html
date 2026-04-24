@@ -1,0 +1,5 @@
+<div class="app">
+  <h1>Parent Component</h1>
+  <p>Counter: {{ myCount }}</p>
+  <app-child [count]="myCount" (countChanged)="countChange($event)"></app-child>
+</div>

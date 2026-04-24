@@ -1,0 +1,7 @@
+<h1>Welcome to {{ title }}</h1>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<!--<p>Counter: {{ counter }}</p>-->
+
+<app-child [count]="counter" [message]="title"></app-child>
+<!--attribute binding-->

@@ -1,0 +1,9 @@
+<h2>Movie list:</h2>
+
+<div class="movie-list">
+  @for (movie of movies$ | async; track movie.Id) {
+    <button class="movie-item" type="button" (click)="goToMovieDetail(movie)">
+      {{ movie.Title }} {{ movie.Year }}
+    </button>
+  }
+</div>

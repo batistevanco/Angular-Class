@@ -1,0 +1,30 @@
+.movie_img {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 14px 18px;
+  border: 1px solid #2a2f35;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #2a2f35;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}

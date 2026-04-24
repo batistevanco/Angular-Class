@@ -1,0 +1,40 @@
+.movie-detail {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 32px 0;
+}
+
+.movie-poster {
+  width: 260px;
+  max-width: 100%;
+}
+
+.movie-info {
+  max-width: 520px;
+}
+
+.movie-info h2 {
+  margin-top: 0;
+}
+
+.movie-info p {
+  margin: 6px 0;
+}
+
+.movie-info h3 {
+  margin: 28px 0 8px;
+}
+
+button {
+  margin-top: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .movie-detail {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
